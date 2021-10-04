@@ -26,6 +26,7 @@ module.exports = {
   title: "thinkbase 开发笔记",
   description: "Talk is cheap. Show me the code.",
   head: [["link", { rel: "icon", href: "/images/thinkbase-icon.gif" }]],
+  theme: '../../../../themes/default',
   themeConfig: {
     logo: "/images/thinkbase-logo.drawio.svg",
     sidebar: _sidebar,
