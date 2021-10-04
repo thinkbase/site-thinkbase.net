@@ -31,9 +31,18 @@ module.exports = {
     sidebar: _sidebar,
     displayAllHeaders: true,
   },
+  lastUpdated: 'Last Updated',
   plugins: [
     ["@vuepress/search", { searchMaxSuggestions: 10 }],
-    ["fulltext-search", {}],
-    ["@vuepress/medium-zoom", {options: {background: "#888"}}]
+    ["fulltext-search"],
+    ["@vuepress/back-to-top"],
+    ["@vuepress/medium-zoom", {options: {background: "#888"}}],
+    ["@vuepress/last-updated", {
+      transformer: (timestamp, lang) => {
+        const moment = require('moment')
+        moment.locale(lang)
+        return moment(timestamp).fromNow()
+      }
+    }]
   ],
 };
