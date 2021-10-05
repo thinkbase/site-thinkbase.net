@@ -22,6 +22,14 @@ const _sidebar = [
   }
 ]
 
+const _nav = [
+  {
+    text:"Tags",
+    link:'/tags/',
+    tags: true  //说明这个 link 是用于 tags 页面
+  }
+]
+
 module.exports = {
   title: "thinkbase 开发笔记",
   description: "Talk is cheap. Show me the code.",
@@ -29,6 +37,7 @@ module.exports = {
   theme: '../../../../themes/default',
   themeConfig: {
     logo: "/images/thinkbase-logo.drawio.svg",
+    nav: _nav,
     sidebar: _sidebar,
     displayAllHeaders: true,
   },
@@ -42,7 +51,8 @@ module.exports = {
       transformer: (timestamp, lang) => {
         const moment = require('moment')
         moment.locale(lang)
-        return moment(timestamp).fromNow()
+        const t = moment(timestamp);
+        return t.format("YYYY-MM-DD hh:mm:ss") + " (" + t.fromNow() + ")"
       }
     }]
   ],

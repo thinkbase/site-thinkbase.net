@@ -1,3 +1,7 @@
+---
+tags:
+ - trac
+---
 # Installation
 
 Installation to `Windows Server 2003` / `Windows Server 2008` / `Windows 7` / `Windows 8`, and _the above versions of Windows_ is recommended. _`Windows XP` and below_ **is not full supported**.

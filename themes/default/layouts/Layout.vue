@@ -29,6 +29,8 @@
 
     <Home v-if="$page.frontmatter.home" />
 
+    <Tags v-else-if="tags"/>
+
     <Page
       v-else
       :sidebar-items="sidebarItems"
@@ -48,7 +50,9 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '../util'
+import { resolveSidebarItems } from '@parent-theme/util'
+
+import Tags from "@theme/components/Tags.vue";
 
 export default {
   name: 'Layout',
@@ -57,12 +61,15 @@ export default {
     Home,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+
+    Tags
   },
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      tags: false
     }
   },
 
@@ -115,6 +122,10 @@ export default {
     }
   },
 
+  created(){
+    this.checkTags(this.$route.path)
+  },
+
   mounted () {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
@@ -145,6 +156,23 @@ export default {
           this.toggleSidebar(false)
         }
       }
+    },
+
+    checkTags(path) {
+      let tags = this.$site.themeConfig.nav.filter(v => v.tags); //判断tags
+      if (tags[0].link === path) {
+        this.tags = true;
+        this.$page.frontmatter.sidebar = false; //tags不需要侧标栏
+      } else {
+        this.tags = false;
+      }
+    },
+
+  },
+
+  watch: {
+    $route: function(params) {
+      this.checkTags(params.path);
     }
   }
 }

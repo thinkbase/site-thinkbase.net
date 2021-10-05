@@ -1,5 +1,6 @@
 ---
-publish: true
+title: Portable Trac 简介
+excerpt: PortableTrac
 tags:
  - trac
 ---

@@ -1,3 +1,8 @@
+---
+tags:
+ - trac
+ - manual
+---
 # Manual
 
 ## The first step: install and play

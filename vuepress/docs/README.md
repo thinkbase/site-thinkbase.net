@@ -25,9 +25,7 @@ TODO。
 
 ### [PortableTrac](prj/PortableTrac)
 The Portable version of web-based software project management ​[Trac](https://trac.edgewall.org/);
-
 > 项目管理软件 [Trac](https://trac.edgewall.org/) 的 Portable 版本。
-
 - [About](prj/PortableTrac/) | [User manual](prj/PortableTrac/manual.html) | [Online demo](http://www.thinkbase.net/trac) | [GitHub Repository](https://github.com/thinkbase/PortableTrac)
 
 ## 其他
