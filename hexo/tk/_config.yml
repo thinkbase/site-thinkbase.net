@@ -5,7 +5,7 @@
 # Site
 title: thinkbase.net
 subtitle: ''
-description: ''
+description: 'thinkbase.net 是一个以程序开发和服务器技术为主的技术博客站点'
 keywords:
 author: thinkbase.net
 language: zh-CN
@@ -97,7 +97,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+### theme: landscape
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
