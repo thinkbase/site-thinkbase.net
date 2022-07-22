@@ -1,0 +1,7 @@
+cover:
+  height_scheme: half
+  background: /site/images/background/light-cloud-with-single-rising.jpg
+  title: 'Welcome to thinkbase.net'
+  subtitle: 'Talk is cheap. Show me the code. <sub>by <a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">Linus Torvalds</a></sub>'
+  search: 'Search thinkbase.net'
+  features: false #Hide all features-icon on home page
